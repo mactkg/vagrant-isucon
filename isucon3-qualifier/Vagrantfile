@@ -80,7 +80,7 @@ Vagrant.configure(2) do |config|
     yum install -y ansible
 
     rm -rf ansible-isucon
-    git clone https://github.com/matsuu/ansible-isucon.git
+    git clone -d only-ruby https://github.com/mactkg/ansible-isucon.git
     (
       cd ansible-isucon/isucon3-qualifier
       PYTHONUNBUFFERED=1 ANSIBLE_FORCE_COLOR=true ansible-playbook playbook.yml -i local
